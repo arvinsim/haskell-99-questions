@@ -11,10 +11,14 @@ Prelude> myLast [1,2,3,4]
 4
 Prelude> myLast ['x','y','z']
 'z'
+
+STATUS: partially solved.
 -}
 
+myLast [] = error "empty list!"
 myLast alist = alist !! (length(alist)-1)
 
 main = do
-    print (myLast [1,2,3,4])
-    print (myLast ['x', 'y', 'z'])
+    print (myLast [1,2,3,4]) -- 4
+    print (myLast ['x', 'y', 'z']) -- 'z'
+    myLast [] -- error
